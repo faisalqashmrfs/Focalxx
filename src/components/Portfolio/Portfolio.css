@@ -1,0 +1,39 @@
+.slick-prev:before {
+    content: url(../../assets/Vector4.svg);
+}
+.slick-next:before {
+    content: url(../../assets/Vector3.svg);
+}
+.slick-prev:before {
+    opacity: .75;
+    color: #282828;
+    -webkit-font-smoothing: antialiased;
+}
+.slick-next:before {
+    opacity: .75;
+    color: #282828;
+    -webkit-font-smoothing: antialiased;
+}
+
+.FqQf-slider .slick-next:before 
+{
+    position: absolute;
+    top: 125px;
+    right: -30px;
+}
+.FqQf-slider .slick-prev:before 
+{
+    position: absolute;
+    top: 125px;
+    left: -30px;
+}
+@media (min-width:1366px) {
+    .slick-next:before {
+        position: relative;
+        right: 2.06rem;
+    }
+    .slick-prev:before {
+        position: relative;
+        left: 2.06rem;
+    }
+}
