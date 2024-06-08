@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const HostCard = ({ title, id, desc, price, discount, keysArray, valuesArray, btn, color, isAbsolute, img }) => {
+const HostCard = ({ title, id, desc, index , btn, color, isAbsolute, img }) => {
 
     const cardStyle = {
         borderTop: `22px solid ${color}`,
@@ -20,7 +20,7 @@ const HostCard = ({ title, id, desc, price, discount, keysArray, valuesArray, bt
             <h1 className="titleH">
                 {title}
             </h1>
-            <div className='Description-fq' dangerouslySetInnerHTML={{ __html: desc }}>
+            <div className={`Description-fq${index}`} dangerouslySetInnerHTML={{ __html: desc }}>
             </div>
             <button className='hostBtn' style={btnStyle}>{btn}</button>
             {isAbsolute ? <img src={img} alt={`s${id}`} className={`img${id + 20}H`} /> : " "}

@@ -1,3 +1,7 @@
+.MaSlider 
+{
+  position: relative;
+}
 .MaSlider .slick-track
 {
   padding-top: 10px ;
@@ -146,6 +150,28 @@
 .MaSlider .slick-center a span
 {
   margin-right: 10px;
+}
+
+.pop-up-trenar
+{
+  position: absolute;
+  width: 80vw;
+  height: 500px;
+  background-color: rgba(112, 5, 5, 0.11);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.pop-up-trenaroff
+{
+  position: absolute;
+  width: 80vw;
+  height: 500px;
+  background-color: rgba(112, 5, 5, 0.11);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: none;
 }
 @media(max-width:725px)
 {

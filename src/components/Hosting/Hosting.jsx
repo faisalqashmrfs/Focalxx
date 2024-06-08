@@ -73,7 +73,7 @@ const Hosting = () => {
             <div className="HostingCard">
                 {data.map((e, index) => (
 
-                    <HostCard key={index} id={e.id} title={e.title} desc={e.description} color={HostingList[index].color} btn={e.action} isAbsolute={e.isAbsolute} img={e.img} />
+                    <HostCard key={index} index={index} id={e.id} title={e.title} desc={e.description} color={HostingList[index].color} btn={e.action} isAbsolute={e.isAbsolute} img={e.img} />
                 ))
 
                 }

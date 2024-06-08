@@ -92,6 +92,8 @@ export const ServicesSection = () => {
   const getRadius = [
     { redus: '0px 44px 44px 0px' },
     { redus: '44px 0px 0px 44px' },
+    { redus: '0px 44px 44px 0px' },
+    { redus: '44px 0px 0px 44px' },
   ];
 
   return (
@@ -113,7 +115,9 @@ export const ServicesSection = () => {
               img={arr[index].img}
               logo={e.image}
               mainImg={arr[index].mainImg}
-              id={e.id} />
+              id={e.id} 
+              index={index}
+              />
           ))
         }
 

@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <React.StrictMode>
-    <BrowserRouter basename='/Focalx-academy'>
+    <BrowserRouter basename='/Focalxx'>
       <App />
     </BrowserRouter>
   </React.StrictMode>

@@ -3,6 +3,7 @@
     height: calc( 100vh - 52px);
     position: relative;
     padding-top: 60px;
+    z-index: -1;
 }
 
 /* left part */
@@ -10,7 +11,7 @@
 .of-left-hero 
 {
     width: 675px;
-    z-index: -1;
+    z-index: -10 !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -25,6 +26,7 @@
     line-height: normal;
     margin-bottom: 10px;
     transition: .5s;
+    z-index: -1 !important;
     /* line-height: 0px; */
 }
 
@@ -66,7 +68,7 @@
     height: 558px;
     background-image: url(./../../assets/image/Mario-Station.png);
     position: absolute;
-    bottom: 50px;
+    bottom: 75px;
     right: 10px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -141,6 +143,7 @@
     {
         width: 400px;
         height: 450px;
+        bottom: 50px;
     }
     .LinkToPlay
     {

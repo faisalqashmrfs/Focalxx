@@ -1,11 +1,19 @@
-import { Component } from "react";
 import Slider from "react-slick";
 import Arrow from "./../Training/Arrow1.svg";
 import './Slider.css';
-import TriningIMG from './../Training/Ali-saleh.png';
+import { useState } from "react";
 
 
 export default function CenterMode({ data }) {
+
+  const [index , setindex] = useState(0)
+  const [indexdone , setindexdone] = useState(false)
+
+  function handelinfo(index)
+  {
+    setindexdone(!indexdone)
+    setindex(index)
+  }
 
   const settings = {
     className: "center",
@@ -34,37 +42,73 @@ export default function CenterMode({ data }) {
         <Slider {...settings}>
           {
             data.map((e, index) => (
-          <div className="MaCard">
-            <div className="M-backGreen"></div>
-            <div className="MTrainingImg">
-              <img src={e.image} alt="Trining-IMG" />
-            </div>
-            <h2>{e.name}</h2>
-            <p>{e.specialization}</p>
-            <a className="MShowMore">
-              <span>Show More</span>
-              <img src={Arrow} alt="Arrow" />
-            </a>
-          </div>
-          ))
+              <div className="MaCard">
+                <div className="M-backGreen"></div>
+                <div className="MTrainingImg">
+                  <img src={e.image} alt="Trining-IMG" />
+                </div>
+                <h2>{e.name}</h2>
+                <p>{e.specialization}</p>
+                <a className="MShowMore" onClick={() => handelinfo(index)}>
+                  <span>Show More</span>
+                  <img src={Arrow} alt="Arrow" />
+                </a>
+              </div>
+            ))
           }
           {
             data.map((e, index) => (
-          <div className="MaCard">
-            <div className="M-backGreen"></div>
-            <div className="MTrainingImg">
-              <img src={e.image} alt="Trining-IMG" />
-            </div>
-            <h2>{e.name}</h2>
-            <p>{e.specialization}</p>
-            <a className="MShowMore">
-              <span>Show More</span>
-              <img src={Arrow} alt="Arrow" />
-            </a>
-          </div>
-          ))
+              <div className="MaCard">
+                <div className="M-backGreen"></div>
+                <div className="MTrainingImg">
+                  <img src={e.image} alt="Trining-IMG" />
+                </div>
+                <h2>{e.name}</h2>
+                <p>{e.specialization}</p>
+                <a className="MShowMore" onClick={() => handelinfo(index)}>
+                  <span>Show More</span>
+                  <img src={Arrow} alt="Arrow" />
+                </a>
+              </div>
+            ))
+          }
+          {
+            data.map((e, index) => (
+              <div className="MaCard">
+                <div className="M-backGreen"></div>
+                <div className="MTrainingImg">
+                  <img src={e.image} alt="Trining-IMG" />
+                </div>
+                <h2>{e.name}</h2>
+                <p>{e.specialization}</p>
+                <a className="MShowMore" onClick={() => handelinfo(index)}>
+                  <span>Show More</span>
+                  <img src={Arrow} alt="Arrow" />
+                </a>
+              </div>
+            ))
+          }
+          {
+            data.map((e, index) => (
+              <div className="MaCard">
+                <div className="M-backGreen"></div>
+                <div className="MTrainingImg">
+                  <img src={e.image} alt="Trining-IMG" />
+                </div>
+                <h2>{e.name}</h2>
+                <p>{e.specialization}</p>
+                <a className="MShowMore" onClick={() => handelinfo(index)}>
+                  <span>Show More</span>
+                  <img src={Arrow} alt="Arrow" />
+                </a>
+              </div>
+            ))
           }
         </Slider>
+        <div className={indexdone ? 'pop-up-trenar' : 'pop-up-trenaroff'}>
+        { indexdone ? <h2>{ data[index].name}</h2> : <></> }
+        <span onClick={handelinfo}>x</span>
+        </div>
       </div>
     </>
   );

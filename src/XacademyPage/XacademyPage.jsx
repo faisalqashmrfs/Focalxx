@@ -9,10 +9,18 @@ import Subsecribe from "../components/Subsecribe/Subsecribe.jsx";
 import Footer from "./../components/Xa-Footer/Footer.jsx";
 import { useState } from 'react';
 import { HeroXacademy } from "../components/HeroXacademy/Hero.jsx";
+import { Link } from "react-router-dom";
 
 export const AcademyPage = () => {
 
   const [sidclass, setsidclass] = useState("side-Nav")
+
+  const [choslink , setchoslink] = useState(4)
+
+  function chosLink(id)
+  {
+    setchoslink(id)
+  }
 
   function changeClass() {
     setsidclass("side-NavActiv")
@@ -48,13 +56,12 @@ export const AcademyPage = () => {
         </div>
         <div className='ul-side-nav'>
           <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Clients & Partners</li>
-            <li className='Activlink'>X Academy</li>
-            <li>About Us</li>
-            <li>Let’s Talk</li>
+            <li className={choslink === 1 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(1)}>Home</Link> </li>
+            <li className={choslink === 2 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(2)}>Portfolio</Link> </li>
+            <li className={choslink === 3 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(3)}>Clients & Partners</Link> </li>
+            <li className={choslink === 4 ? 'Activlink' : ''}><Link to={'/AcademyPage'} onClick={() => chosLink(4)}>X Academy</Link> </li>
+            <li className={choslink === 5 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(5)}>About Us</Link> </li>
+            <li className={choslink === 6 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(6)}>Let’s Talk</Link> </li>
           </ul>
         </div>
         <div
@@ -91,7 +98,7 @@ export const AcademyPage = () => {
         </div>
       </nav>
       <HeroXacademy />
-      {/* <MeetTeam /> */}
+      <MeetTeam />
       <EmpowerJourney />
       <Certificate />
       <Creativity />

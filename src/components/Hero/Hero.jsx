@@ -1,7 +1,5 @@
 import './Hero.css';
 import VideoFooter from '../VideoFooter/VideoFooter';
-import MarioStation from './../../assets/image/Mario-Station.png';
-import backk2 from './../../assets/image/branding-pattren.png';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {

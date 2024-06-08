@@ -23,11 +23,11 @@
     display: grid;
     margin: 0 auto;
     width: 100%;
-   grid-template-columns: repeat(4 ,22.18%);
-   gap: 30px;
-  justify-content: center;
-  position: relative;
-  margin-top: 2%;
+    grid-template-columns: repeat(4 ,22.18%);
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+    margin-top: 2%;
 
 }
 .img1H{
@@ -205,7 +205,7 @@
 .conHost{
     padding: 0 0.5rem;
 }
-.Description-fq p:first-child
+.Description-fq0 p:first-child,.Description-fq1 p:first-child,.Description-fq2 p:first-child,.Description-fq3 p:first-child
 {
     font-weight: 400;
     font-size: 14px;
@@ -214,15 +214,15 @@
     width: 95%;
     height: 40px;
 }
-.Description-fq p:nth-child(3)
+.Description-fq0 p:nth-child(3),.Description-fq1 p:nth-child(3),.Description-fq2 p:nth-child(3),.Description-fq3 p:nth-child(3)
 {
     position: absolute;
-    top: 90px;
+    top: 100px;
     right: 40px;
     width: 40%;
 }
 
-.Description-fq h1 , .Description-fq h2
+.Description-fq0 h1 , .Description-fq0 h2,.Description-fq1 h1 , .Description-fq1 h2,.Description-fq2 h1 , .Description-fq2 h2,.Description-fq3 h1 , .Description-fq3 h2
 {
     font-family: 'Gothic A1', sans-serif;
     font-size: 25px;
@@ -231,15 +231,20 @@
     margin-bottom: 15px;
 }
 
-.Description-fq ul{
+.Description-fq0 ul,.Description-fq1 ul,.Description-fq2 ul,.Description-fq3 ul
+{
     margin: 0.6rem 0;
-    /* height: 200px; */
 }
-.Description-fq ul li{
-    font-family: 'Gothic A1', sans-serif;
-    font-weight: 700;
+.Description-fq0 ul li,.Description-fq1 ul li,.Description-fq2 ul li,.Description-fq3 ul li
+{
+    font-family: Montserrat;
     font-size: 16px;
-    line-height: 29.5px;
+    font-weight: 700;
+    line-height: 19.5px;
+    text-align: left;
+    color: #282828;
+    margin-top: 5px;
+
 }
 
 @media (max-width:410px)

@@ -9,9 +9,23 @@ import ContactUs from '../components/ContactUs/ContactUs'
 import Footer from '../components/Footer/Footer'
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 const LandingPage = () => {
 
   const [data, setData] = useState([]);
+
+  const [choslink, setchoslink] = useState(1)
+  const [choslink2, setchoslink2] = useState(false)
+
+  function chosLink(id) {
+    setchoslink(id)
+    if (id === 6) {
+      setchoslink2(!choslink2)
+    }
+    else {
+      setchoslink2(false)
+    }
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,14 +73,14 @@ const LandingPage = () => {
       }]
     }]
 
-    const [sidclass, setsidclass] = useState("side-Nav")
+  const [sidclass, setsidclass] = useState("side-Nav")
 
-    function changeClass() {
-      setsidclass("side-NavActiv")
-    }
-    function changeClass2() {
-      setsidclass("side-Nav")
-    }
+  function changeClass() {
+    setsidclass("side-NavActiv")
+  }
+  function changeClass2() {
+    setsidclass("side-Nav")
+  }
 
   return (
     <main className="NacFroFocalX">
@@ -95,13 +109,12 @@ const LandingPage = () => {
         </div>
         <div className='ul-side-nav'>
           <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Clients & Partners</li>
-            <li className='Activlink'>X Academy</li>
-            <li>About Us</li>
-            <li>Let’s Talk</li>
+            <li className={choslink === 1 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(1)}>Home</Link> </li>
+            <li className={choslink === 2 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(2)}>Portfolio</Link> </li>
+            <li className={choslink === 3 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(3)}>Clients & Partners</Link> </li>
+            <li className={choslink === 4 ? 'Activlink' : ''}><Link to={'/AcademyPage'} onClick={() => chosLink(4)}>X Academy</Link> </li>
+            <li className={choslink === 5 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(5)}>About Us</Link> </li>
+            <li className={choslink === 6 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(6)}>Let’s Talk</Link> </li>
           </ul>
         </div>
         <div
@@ -142,14 +155,14 @@ const LandingPage = () => {
       <Hosting />
       <Portfolio />
       {aboutS.map((e) => (
-        <About key={e.id} title={e.title} description={e.desc} subT={e.subT} subSTit={e.descSub} descSub={e.subST} cardsA={e.cardsD}/>
+        <About key={e.id} title={e.title} description={e.desc} subT={e.subT} subSTit={e.descSub} descSub={e.subST} cardsA={e.cardsD} />
       ))}
       <Intern />
       <Acheive />
-      <ContactUs  />
+      <ContactUs />
       <Footer />
     </main>
-    
+
   )
 }
 
