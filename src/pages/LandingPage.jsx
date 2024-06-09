@@ -110,12 +110,20 @@ const LandingPage = () => {
         <div className='ul-side-nav'>
           <ul>
             <li className={choslink === 1 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(1)}>Home</Link> </li>
-            <li className={choslink === 1 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(1)}>Home</Link> </li>
-            <li className={choslink === 2 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(2)}>Portfolio</Link> </li>
-            <li className={choslink === 3 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(3)}>Clients & Partners</Link> </li>
-            <li className={choslink === 4 ? 'Activlink' : ''}><Link to={'/AcademyPage'} onClick={() => chosLink(4)}>X Academy</Link> </li>
-            <li className={choslink === 5 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(5)}>About Us</Link> </li>
-            <li className={choslink === 6 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(6)}>Let’s Talk</Link> </li>
+            <li className={choslink === 2 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(2)}>Services</Link> </li>
+            <li className={choslink === 3 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(3)}>Portfolio</Link> </li>
+            <li className={choslink === 4 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(4)}>Clients & Partners</Link> </li>
+            <li className={choslink === 5 ? 'Activlink' : ''}><Link to={'/AcademyPage'} onClick={() => chosLink(5)}>X Academy</Link> </li>
+            <li className={choslink === 6 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(6)}>
+            About Us
+            <span className={choslink2 ? 'awro-fq-navbar' : 'awro-fq-navbar2'}></span>
+            <li className={choslink2 ? 'About-list' : 'About-list2'}>
+              <p>Who & Why</p>
+              <p>Internship</p>
+              <p>Achievement</p>
+            </li>
+            </Link></li>
+            <li className={choslink === 7 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(7)}>Let’s Talk</Link> </li>
           </ul>
         </div>
         <div

@@ -1,3 +1,7 @@
+.Eq-INTERNslider
+{
+     height: max-content;
+}
 .Eq-INTERNslider .slick-next:before
 {
      position: absolute;

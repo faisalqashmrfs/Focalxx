@@ -44,7 +44,8 @@ export default function CertificateAfterS() {
                                     <div>
                                           {
                                                 Data.certificate_type == "graduation" ?
-                                                      <div className='box-certificate'>
+                                                      <section className='For-intern-FQ'>
+                                                            <div className='box-certificate'>
                                                             <div id="pdf-content2" className='PDF-containar'>
                                                                   <div className='Border border2'>
                                                                         <div className='top'>
@@ -86,6 +87,10 @@ export default function CertificateAfterS() {
                                                                   </div>
                                                             </div>
                                                       </div>
+                                                      <div>
+                                                            xzxzxz
+                                                      </div>
+                                                      </section>
                                                       :
                                                       <div className='box-certificate'>
                                                             <div id="pdf-content" className='PDF-containar'>

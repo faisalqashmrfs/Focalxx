@@ -7,6 +7,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.xsfq
+{
+    height: 506px;
+    width: 100%;
+    margin-top: 94px;
+    background-image: url(./../../assets/types.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .Subsecribe .Content
 {
     width: 962px;

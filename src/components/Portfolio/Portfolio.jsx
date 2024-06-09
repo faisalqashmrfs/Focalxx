@@ -132,7 +132,7 @@ const Portfolio = () => {
               </h2>
               <p className='text-my-black font-my-font font-normal text-2xl not-italic leading-normal'>Full Branding Identity Design Packaging
                 <span className='underline flex items-center'>Click to View
-                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="6" viewBox="0 0 23 6" fill="none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="6" style={{margin:'0 0 0 4px'}} viewBox="0 0 23 6" fill="none">
                     <path d="M23 3L18 0.113249V5.88675L23 3ZM0 3.5H18.5V2.5H0V3.5Z" fill="#282828" />
                   </svg>
                 </span>
@@ -351,9 +351,9 @@ const Portfolio = () => {
       </section>
       {/* section Seven*/}
       <div className="mt-[3.94rem] flex flex-wrap">
-        <img src={img_23} alt="this is image" />
-        <img src={img_24} alt="this is image" />
-        <h2 className="text-my-black font-my-font text-3xl not-italic font-bold leading-normal pl-[1rem] pt-[2.06rem]">Sister Companies & Digital Partners</h2>
+        {/* <img src={img_23} alt="this is image" />
+        <img src={img_24} alt="this is image" /> */}
+        <h2 className="text-my-black font-my-font text-3xl not-italic font-bold leading-normal pl-[1rem] pt-[2.06rem]" style={{textAlign:'center' , width:'max-content' , margin:'0 auto'}}>Sister Companies & Digital Partners</h2>
       </div>
       {/* section */}
       <section style={{ boxShadow: ' 0px 4px 40px 0px rgba(112, 144, 176, 0.14)' }} className="of-slider FqQf-slider py-[2.26rem] px-[2.06rem] mt-[2.12rem]  bg-white ">

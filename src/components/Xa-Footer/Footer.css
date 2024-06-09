@@ -87,6 +87,10 @@
     font-weight: 700;
     line-height: normal;
 }
+.Icons-footer
+{
+    display: flex;
+}
 .Icons-footer svg
 {
     margin-right: 9px;

@@ -1,7 +1,7 @@
 .FeedBack-SEC
 {
     width: 100%;
-    height: 450px;
+    height: 500px;
     overflow: hidden;
 }
 .FeedBack-SEC .title-fq
@@ -14,7 +14,7 @@
     height: 247px !important;
     border-radius: 20px;
     background: #FFF;
-    box-shadow: 0px 4px 24px 0px rgba(112, 144, 176, 0.10);
+    /* box-shadow: 0px 4px 24px 0px rgba(112, 144, 176, 0.10); */
     /* padding: 20px 50px 0px 50px!important; */
     transform: translateX(-260px);
     border: 10px solid white;
@@ -26,7 +26,7 @@
     margin: 0 10px;
     border-radius: 20px;
     background: #FFF !important;
-    box-shadow: 0px 4px 40px 0px rgba(112, 144, 176, 0.24);
+    /* box-shadow: 0px 4px 40px 0px rgba(112, 144, 176, 0.24); */
 }
 
 /* .FB-slider .slick-slide .oneFeedSLICS h2
@@ -83,7 +83,11 @@
     line-height: 155%;
     margin-top: 22px;
 } */
-
+.FeedBack-SEC div img
+{
+    width: max-content;
+    margin: -50px auto;
+}
 @media(max-width:745px)
 {
     .FB-slider .slick-slide .oneFeedSLICS h2

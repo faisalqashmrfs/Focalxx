@@ -1,6 +1,7 @@
 import React from 'react'
 import "./InternStyle.css"
 import SliderCom from '../Slider/SliderCom'
+import CenterMode2 from '../Feedback/FeedSlide/Feedslide'
 const Intern = () => {
     return (
         <div className='intern' id='inter'>
@@ -19,7 +20,7 @@ const Intern = () => {
                     Today We Are so proud of All Interns in our agency and what they become. </p>
             </div>
             <h2 className="text-my-black mt-10 text-center font-my-font text-3xl not-italic font-bold leading-normal mx-auto w-[20.7rem]">Inters Feedback</h2>
-            <SliderCom />
+            <CenterMode2/>
         </div>
     )
 }

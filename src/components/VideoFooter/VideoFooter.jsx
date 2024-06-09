@@ -10,7 +10,7 @@ export default function VideoFooter() {
         <footer className='Video-Footer'>
             <div className='contant'>
                 <p>
-                    2021 - 2023 focal X agency All Right Reserved
+                ©  2021 - 2023 focal X agency All Right Reserved
                 </p>
                 <div className='IconsFather'>
                     <div>
