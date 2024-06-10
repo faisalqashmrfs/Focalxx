@@ -11,8 +11,18 @@ export default function CertificateAfterS() {
 
       const { id } = useParams();
       let NameOfIntern = { id }
-
+      const [currentIndex, setCurrentIndex] = useState(0);
+      const [currentIndex2, setCurrentIndex2] = useState();
       const [Data, setData] = useState();
+
+      const handleNext = () => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % Data.length);
+      };
+
+      // دالة للعودة إلى العنصر السابق
+      const handlePrev = () => {
+            setCurrentIndex((prevIndex) => (prevIndex - 1 + Data.length) % Data.length);
+      };
 
       useEffect(() => {
             const fetchUsers = async () => {
@@ -25,155 +35,222 @@ export default function CertificateAfterS() {
                               }
                         );
                         setData(response.data);
-                        console.log(Data);
+                        setCurrentIndex2(response.data[currentIndex]);
+                        console.log(currentIndex2);
                   } catch (error) {
                         console.error('Error fetching users:', error);
                   }
             };
             fetchUsers();
-      }, []);
+      }, [currentIndex]);
 
 
       return (
             <section className='Certifi-fq-f'>
                   {
-                      Data ?
-                      <section>
-                            {
-                                  Data.map((Data) => (
+                        currentIndex2 ?
+                              <section>
                                     <div>
                                           {
-                                                Data.certificate_type == "graduation" ?
+                                                currentIndex2.certificate_type == "graduation" ?
                                                       <section className='For-intern-FQ'>
                                                             <div className='box-certificate'>
-                                                            <div id="pdf-content2" className='PDF-containar'>
-                                                                  <div className='Border border2'>
-                                                                        <div className='top'>
-                                                                              <p>INTERNSHIP CERTIFICATE</p>
-                                                                              <div><img src={focal} alt="focal-x" /></div>
-                                                                        </div>
-                                                                        <div className='Mid mid2'>
-                                                                              <span>This is to certify that</span>
-                                                                              <p>{Data.name}</p>
-                                                                              <span className='midmid'>successfully completed four months internship program<br /> and received passing grades for certificate in</span>
-                                                                              <p>{Data.specialization}</p>
-                                                                              <span>a program offered by focal X (L.L.C)</span>
-                                                                        </div>
-                                                                        <div className='End'>
-                                                                              <div className='left'>
-                                                                                    <div className='qr'>
-                                                                                          <QRCode
-                                                                                                value="https://www.example.com"
-                                                                                                size={78}
-                                                                                                bgColor={"#ffffff"}
-                                                                                                fgColor={"#000000"}
-                                                                                                level={"L"}
-                                                                                                includeMargin={false}
-                                                                                                renderAs={"svg"}
-                                                                                          />
-                                                                                    </div>
-                                                                                    <div className='description'>
-                                                                                          <span className='xxx'>Scan To Search</span>
-                                                                                          <span>Issued 2024-December</span>
-                                                                                          <span>VALID CERTIFICATE ID</span>
-                                                                                          <span>9PED0SS3Z08</span>
-                                                                                    </div>
+                                                                  <div id="pdf-content" className='PDF-containar'>
+                                                                        <div className='Border border2'>
+                                                                              <div className='top'>
+                                                                                    <p>INTERNSHIP CERTIFICATE</p>
+                                                                                    <div><img src={focal} alt="focal-x" /></div>
                                                                               </div>
-                                                                              <div className='right'>
-                                                                                    <div className='CEOName'>Alaa Darwish</div>
-                                                                                    <div className='ceo'>Founder & CEO</div>
+                                                                              <div className='Mid mid2'>
+                                                                                    <span>This is to certify that</span>
+                                                                                    <p>{currentIndex2.name}</p>
+                                                                                    <span className='midmid'>successfully completed four months internship program<br /> and received passing grades for certificate in</span>
+                                                                                    <p>{currentIndex2.specialization}</p>
+                                                                                    <span>a program offered by focal X (L.L.C)</span>
+                                                                              </div>
+                                                                              <div className='End'>
+                                                                                    <div className='left'>
+                                                                                          <div className='qr'>
+                                                                                                <QRCode
+                                                                                                      value="https://www.example.com"
+                                                                                                      size={78}
+                                                                                                      bgColor={"#ffffff"}
+                                                                                                      fgColor={"#000000"}
+                                                                                                      level={"L"}
+                                                                                                      includeMargin={false}
+                                                                                                      renderAs={"svg"}
+                                                                                                />
+                                                                                          </div>
+                                                                                          <div className='description'>
+                                                                                                <span className='xxx'>Scan To Search</span>
+                                                                                                <span>Issued 2024-December</span>
+                                                                                                <span>VALID CERTIFICATE ID</span>
+                                                                                                <span>9PED0SS3Z08</span>
+                                                                                          </div>
+                                                                                    </div>
+                                                                                    <div className='right'>
+                                                                                          <div className='CEOName'>Alaa Darwish</div>
+                                                                                          <div className='ceo'>Founder & CEO</div>
+                                                                                    </div>
                                                                               </div>
                                                                         </div>
                                                                   </div>
                                                             </div>
-                                                      </div>
-                                                      <div>
-                                                            xzxzxz
-                                                      </div>
+                                                            <div className='Main-certificate'>
+                                                                  <p className='className'>
+                                                                        <p><span>Duration:</span>{currentIndex2.id_certificate}</p>
+                                                                        <span>{currentIndex2.name}</span>
+                                                                        <p><span>ID Certificate:</span>{currentIndex2.id_certificate}</p>
+                                                                  </p>
+                                                                  <p><span>E-mail:</span>{currentIndex2.email}</p>
+                                                                  <p><span>Specialization:</span>{currentIndex2.specialization}</p>
+                                                                  <p><span>KPI:</span>{currentIndex2.kpi}</p>
+                                                                  <p><span>Supervisor:</span>{currentIndex2.supervisor}</p>
+                                                                  <p>
+                                                                        <h3>Start Date: {currentIndex2.startDate}</h3>
+                                                                        <h3>End Date: {currentIndex2.endDate}</h3>
+                                                                  </p>
+                                                                  <p className='Last-certificate-option'>
+                                                                        <p>
+                                                                              {
+                                                                                    Data.length > 1 ?
+                                                                                          <div>
+                                                                                                <button onClick={handlePrev} disabled={currentIndex === 0}>
+                                                                                                      Prev
+                                                                                                </button>
+                                                                                          </div>
+                                                                                          :
+                                                                                          ''
+                                                                              }
+                                                                              <button onClick={() => createPDF(currentIndex2.name)}>
+                                                                                    Get Your Certificate
+                                                                              </button>
+                                                                              {
+                                                                                    Data.length > 1 ?
+                                                                                          <div>
+                                                                                                <button onClick={handleNext} disabled={currentIndex === Data.length - 1}>
+                                                                                                      Next
+                                                                                                </button>
+                                                                                          </div>
+                                                                                          :
+                                                                                          ''
+                                                                              }
+                                                                        </p>
+                                                                  </p>
+
+                                                            </div>
                                                       </section>
                                                       :
-                                                      <div className='box-certificate'>
-                                                            <div id="pdf-content" className='PDF-containar'>
-                                                                  <div className='Border'>
-                                                                        <div className='top'>
-                                                                              <p>INTERNSHIP CERTIFICATE</p>
-                                                                              <div><img src={focal} alt="focal-x" /></div>
-                                                                        </div>
-                                                                        <div className='Mid'>
-                                                                              <span>This is to certify that</span>
-                                                                              <p>{Data.name}</p>
-                                                                              <span>attend 4 months internship program in</span>
-                                                                              <p>{Data.specialization}</p>
-                                                                              <span>a program offered by focal X (L.L.C)</span>
-                                                                        </div>
-                                                                        <div className='End'>
-                                                                              <div className='left'>
-                                                                                    <div className='qr'>
-                                                                                          <QRCode
-                                                                                                value="https://www.example.com"
-                                                                                                size={78}
-                                                                                                bgColor={"#ffffff"}
-                                                                                                fgColor={"#000000"}
-                                                                                                level={"L"}
-                                                                                                includeMargin={false}
-                                                                                                renderAs={"svg"}
-                                                                                          />
-                                                                                    </div>
-                                                                                    <div className='description'>
-                                                                                          <span className='xxx'>Scan To Search</span>
-                                                                                          <span>Issued 2024-December</span>
-                                                                                          <span>VALID CERTIFICATE ID</span>
-                                                                                          <span>9PED0SS3Z08</span>
-                                                                                    </div>
+                                                      <section>
+                                                            <div className='box-certificate'>
+                                                                  <div id="pdf-content" className='PDF-containar'>
+                                                                        <div className='Border'>
+                                                                              <div className='top'>
+                                                                                    <p>INTERNSHIP CERTIFICATE</p>
+                                                                                    <div><img src={focal} alt="focal-x" /></div>
                                                                               </div>
-                                                                              <div className='right'>
-                                                                                    <div className='CEOName'>Alaa Darwish</div>
-                                                                                    <div className='ceo'>Founder & CEO</div>
+                                                                              <div className='Mid'>
+                                                                                    <span>This is to certify that</span>
+                                                                                    <p>{currentIndex2.name}</p>
+                                                                                    <span>attend 4 months internship program in</span>
+                                                                                    <p>{currentIndex2.specialization}</p>
+                                                                                    <span>a program offered by focal X (L.L.C)</span>
+                                                                              </div>
+                                                                              <div className='End'>
+                                                                                    <div className='left'>
+                                                                                          <div className='qr'>
+                                                                                                <QRCode
+                                                                                                      value="https://www.example.com"
+                                                                                                      size={78}
+                                                                                                      bgColor={"#ffffff"}
+                                                                                                      fgColor={"#000000"}
+                                                                                                      level={"L"}
+                                                                                                      includeMargin={false}
+                                                                                                      renderAs={"svg"}
+                                                                                                />
+                                                                                          </div>
+                                                                                          <div className='description'>
+                                                                                                <span className='xxx'>Scan To Search</span>
+                                                                                                <span>Issued 2024-December</span>
+                                                                                                <span>VALID CERTIFICATE ID</span>
+                                                                                                <span>9PED0SS3Z08</span>
+                                                                                          </div>
+                                                                                    </div>
+                                                                                    <div className='right'>
+                                                                                          <div className='CEOName'>Alaa Darwish</div>
+                                                                                          <div className='ceo'>Founder & CEO</div>
+                                                                                    </div>
                                                                               </div>
                                                                         </div>
                                                                   </div>
                                                             </div>
-                                                      </div>
+                                                            <div className='Main-certificate'>
+                                                                  <p className='className'>
+                                                                        <p><span>Duration:</span>{currentIndex2.id_certificate}</p>
+                                                                        <span>{currentIndex2.name}</span>
+                                                                        <p><span>ID Certificate:</span>{currentIndex2.id_certificate}</p>
+                                                                  </p>
+                                                                  <p><span>E-mail:</span>{currentIndex2.email}</p>
+                                                                  <p><span>Specialization:</span>{currentIndex2.specialization}</p>
+                                                                  <p><span>KPI:</span>{currentIndex2.kpi}</p>
+                                                                  <p><span>Supervisor:</span>{currentIndex2.supervisor}</p>
+                                                                  <p>
+                                                                        <h3>Start Date: {currentIndex2.startDate}</h3>
+                                                                        <h3>End Date: {currentIndex2.endDate}</h3>
+                                                                  </p>
+                                                                  <p className='Last-certificate-option'>
+                                                                        <p>
+                                                                              {
+                                                                                    Data.length > 1 ?
+                                                                                          <div>
+                                                                                                <button onClick={handlePrev} disabled={currentIndex === 0}>
+                                                                                                      Prev
+                                                                                                </button>
+                                                                                          </div>
+                                                                                          :
+                                                                                          ''
+                                                                              }
+                                                                              <button onClick={() => createPDF(currentIndex2.name)}>
+                                                                                    Get Your Certificate
+                                                                              </button>
+                                                                              {
+                                                                                    Data.length > 1 ?
+                                                                                          <div>
+                                                                                                <button onClick={handleNext} disabled={currentIndex === Data.length - 1}>
+                                                                                                      Next
+                                                                                                </button>
+                                                                                          </div>
+                                                                                          :
+                                                                                          ''
+                                                                              }
+                                                                        </p>
+                                                                  </p>
+
+                                                            </div>
+                                                      </section>
                                           }
                                     </div>
-                              ))
-                            }
-                      </section>
-                      :
-                      <></>  
+                              </section>
+                              :
+                              <></>
                   }
             </section>
       )
 }
 
 
-const createPDF = () => {
+const createPDF = (name) => {
       const input = document.getElementById('pdf-content');
 
-      html2canvas(input).then((canvas) => {
-            const imgData = canvas.toDataURL('image/png');
+      html2canvas(input, { scale: 5 }).then((canvas) => {
+            const imgData = canvas.toDataURL('image/png', 1.0);
             const pdf = new jsPDF({
                   orientation: 'landscape',
                   unit: 'mm',
                   format: [222, 157.6]
             });
-            pdf.addImage(imgData, 'PNG', 0, 0);
-            pdf.save('شهادة حضور');
-      });
-};
-
-const createPDF2 = () => {
-      const input = document.getElementById('pdf-content2');
-
-      html2canvas(input).then((canvas) => {
-            const imgData = canvas.toDataURL('image/png');
-            const pdf = new jsPDF({
-                  orientation: 'landscape',
-                  unit: 'mm',
-                  format: [223, 157.6]
-            });
-            pdf.addImage(imgData, 'PNG', 0, 0);
-            pdf.save('شهادة تخرج');
+            pdf.addImage(imgData, 'PNG', 0, 0, 222, 157.6, undefined, 'FAST');
+            pdf.save(`${name}.pdf`);
       });
 };
 
