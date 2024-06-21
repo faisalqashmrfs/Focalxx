@@ -42,7 +42,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 2%;
+  margin: o auto 2% auto;
+  gap: 1.5rem;
 }
 
 .itemSer {
@@ -51,10 +52,12 @@
   font-weight: 400;
   border-radius: 6px;
   padding: 0.2rem 0.6rem;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
   box-shadow: 0 3px 11px 2px rgba(40, 40, 40, 0.09);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .headHost {

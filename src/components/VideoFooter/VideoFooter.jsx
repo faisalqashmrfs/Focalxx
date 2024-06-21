@@ -4,6 +4,7 @@ import insta from './../../assets/image/insta.png'
 import linkedin from './../../assets/image/linkedin.png'
 import behance from './../../assets/image/behance.png'
 import facebook from './../../assets/image/facebook.png'
+import scrool from './../../assets/scrollling.png'
 
 export default function VideoFooter() {
     return (
@@ -30,6 +31,7 @@ export default function VideoFooter() {
                     </div>
                 </div>
             </div>
+            <img className='scrooling' src={scrool} alt="scrool-photo" />
         </footer>
     )
 }

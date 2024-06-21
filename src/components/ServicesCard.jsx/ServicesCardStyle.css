@@ -13,7 +13,6 @@
   z-index: -10;
   width: 100%;
   height: 100%;
-
 }
 
 .innerCard {
@@ -84,7 +83,7 @@ h2 {
   position: absolute;
   right: 6%;
   bottom: 5%;
-
+  width: 97px;
 }
 
 .titleCard {
@@ -145,7 +144,7 @@ h2 {
   font-weight: 700 !important;
   line-height: 18.67px !important;
   text-align: left !important;
-  margin: 17.5px 0 10px 0;
+  margin: 10.5px 0 10px 0;
 }
 .Description-fq0 p:nth-child(2)
 {
@@ -263,11 +262,27 @@ h2 {
   margin-top: 50px;
   margin-bottom: 17.5px;
 }
+
+.Description-fq3 p:nth-child(4)
+{
+  font-family: Montserrat !important;
+  font-size: 16px !important;
+ font-weight: 700 !important;
+  line-height: 17.67px !important;
+  text-align: left !important;
+  margin-top: 20px;
+}
 @media (max-width:1100px) {
   .card {
     margin: 0 auto;
     width: 610px;
     margin-top: 8%;
+  }
+  .XImg {
+    position: absolute;
+    right: 6%;
+    bottom: 5%;
+    width: 97px;
   }
 }
 
@@ -286,6 +301,10 @@ h2 {
   .Alist {
     max-width: 70%;
   }
+  .Ximg
+  {
+    display: none;
+  }
 }
 
 @media (max-width:440px) {
@@ -297,5 +316,24 @@ h2 {
   .Alist {
     max-width: 70%;
   }
+  .XImg {
+    position: absolute;
+    right: 6%;
+    bottom: 5%;
+    width: 57px;
+  }
 
+
+  .Service ul li
+  {
+    width: 190px;
+  }
+  .img
+  {
+    width: 300px;
+    height: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    top: -40px;
+  }
 }

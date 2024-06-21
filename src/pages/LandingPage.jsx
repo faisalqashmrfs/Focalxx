@@ -10,6 +10,7 @@ import Footer from '../components/Footer/Footer'
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
+
 const LandingPage = () => {
 
   const [data, setData] = useState([]);
@@ -115,13 +116,13 @@ const LandingPage = () => {
             <li className={choslink === 4 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(4)}>Clients & Partners</Link> </li>
             <li className={choslink === 5 ? 'Activlink' : ''}><Link to={'/AcademyPage'} onClick={() => chosLink(5)}>X Academy</Link> </li>
             <li className={choslink === 6 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(6)}>
-            About Us
-            <span className={choslink2 ? 'awro-fq-navbar' : 'awro-fq-navbar2'}></span>
-            <li className={choslink2 ? 'About-list' : 'About-list2'}>
-              <p>Who & Why</p>
-              <p>Internship</p>
-              <p>Achievement</p>
-            </li>
+              About Us
+              <span className={choslink2 ? 'awro-fq-navbar' : 'awro-fq-navbar2'}></span>
+              <li className={choslink2 ? 'About-list' : 'About-list2'}>
+                <p>Who & Why</p>
+                <p>Internship</p>
+                <p>Achievement</p>
+              </li>
             </Link></li>
             <li className={choslink === 7 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(7)}>Let’s Talk</Link> </li>
           </ul>
@@ -147,15 +148,23 @@ const LandingPage = () => {
             </svg>
           </div>
           <div className='ul'>
-            <ul>
-              <li>Home</li>
-              <li>Services</li>
-              <li>Portfolio</li>
-              <li>Clients & Partners</li>
-              <li className='Activlink'>X Academy</li>
-              <li>About Us</li>
-              <li>Let’s Talk</li>
-            </ul>
+          <ul>
+            <li className={choslink === 1 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(1)}>Home</Link> </li>
+            <li className={choslink === 2 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(2)}>Services</Link> </li>
+            <li className={choslink === 3 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(3)}>Portfolio</Link> </li>
+            <li className={choslink === 4 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(4)}>Clients & Partners</Link> </li>
+            <li className={choslink === 5 ? 'Activlink' : ''}><Link to={'/AcademyPage'} onClick={() => chosLink(5)}>X Academy</Link> </li>
+            <li className={choslink === 6 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(6)}>
+            About Us
+            <span className={choslink2 ? 'awro-fq-navbar' : 'awro-fq-navbar2'}></span>
+            <li className={choslink2 ? 'About-list' : 'About-list2'}>
+              <p>Who & Why</p>
+              <p>Internship</p>
+              <p>Achievement</p>
+            </li>
+            </Link></li>
+            <li className={choslink === 7 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(7)}>Let’s Talk</Link> </li>
+          </ul>
           </div>
         </div>
       </nav>

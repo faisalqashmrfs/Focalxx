@@ -1,5 +1,5 @@
 import './Hero.css';
-import trainingFile from './../../assets/Training-file/Tr.pdf';
+import trainingFile from './../../assets/Training-file/X-academy-2024-V.7-Syria.pdf';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -30,7 +30,7 @@ export const HeroXacademy = () => {
           <p>In focal X agency We believe that every human need second chance, Every trainee is our partner, and hand in hand we are here to build something different and special.</p>
           <div className='HeroLogin'>
             <button>Login</button>
-            <a href={trainingFile} download="Tr.pdf">Download training file</a>
+            <a href={trainingFile} download="X academy 2024 V.7 Syria.pdf">Download training file</a>
           </div>
         </div>
         <div className='Hero-numberAnimat'>

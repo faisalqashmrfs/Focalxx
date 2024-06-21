@@ -15,6 +15,12 @@ export default function CertificateAfterS() {
       const [currentIndex2, setCurrentIndex2] = useState();
       const [Data, setData] = useState();
 
+
+
+      const [daysDifference, setDaysDifference] = useState(0);
+
+
+
       const handleNext = () => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % Data.length);
       };
@@ -37,6 +43,17 @@ export default function CertificateAfterS() {
                         setData(response.data);
                         setCurrentIndex2(response.data[currentIndex]);
                         console.log(currentIndex2);
+
+
+                        // حساب الفرق بين التاريخين
+                        const startDate = new Date(response.data[currentIndex].startDate);
+                        const endDate = new Date(response.data[currentIndex].endDate);
+                        const differenceInTime = endDate - startDate;
+                        const differenceInDays = differenceInTime / (1000 * 3600 * 24);
+
+                        setDaysDifference(differenceInDays);
+
+
                   } catch (error) {
                         console.error('Error fetching users:', error);
                   }
@@ -98,7 +115,7 @@ export default function CertificateAfterS() {
                                                             </div>
                                                             <div className='Main-certificate'>
                                                                   <p className='className'>
-                                                                        <p><span>Duration:</span>{currentIndex2.id_certificate}</p>
+                                                                        <p><span>Duration:</span>{daysDifference}</p>
                                                                         <span>{currentIndex2.name}</span>
                                                                         <p><span>ID Certificate:</span>{currentIndex2.id_certificate}</p>
                                                                   </p>
@@ -115,20 +132,22 @@ export default function CertificateAfterS() {
                                                                               {
                                                                                     Data.length > 1 ?
                                                                                           <div>
-                                                                                                <button onClick={handlePrev} disabled={currentIndex === 0}>
+                                                                                                <button className='Prevuuuu' onClick={handlePrev} disabled={currentIndex === 0}>
                                                                                                       Prev
                                                                                                 </button>
                                                                                           </div>
                                                                                           :
                                                                                           ''
                                                                               }
-                                                                              <button onClick={() => createPDF(currentIndex2.name)}>
+                                                                              <button className='Get-you-certi' onClick={() => createPDF(currentIndex2.name)}>
                                                                                     Get Your Certificate
                                                                               </button>
                                                                               {
                                                                                     Data.length > 1 ?
                                                                                           <div>
-                                                                                                <button onClick={handleNext} disabled={currentIndex === Data.length - 1}>
+                                                                                                <button
+                                                                                                      className='nexttttttt'
+                                                                                                      onClick={handleNext} disabled={currentIndex === Data.length - 1}>
                                                                                                       Next
                                                                                                 </button>
                                                                                           </div>
@@ -186,7 +205,7 @@ export default function CertificateAfterS() {
                                                             </div>
                                                             <div className='Main-certificate'>
                                                                   <p className='className'>
-                                                                        <p><span>Duration:</span>{currentIndex2.id_certificate}</p>
+                                                                        <p><span>Duration:</span>{daysDifference}</p>
                                                                         <span>{currentIndex2.name}</span>
                                                                         <p><span>ID Certificate:</span>{currentIndex2.id_certificate}</p>
                                                                   </p>
@@ -210,7 +229,7 @@ export default function CertificateAfterS() {
                                                                                           :
                                                                                           ''
                                                                               }
-                                                                              <button onClick={() => createPDF(currentIndex2.name)}>
+                                                                              <button className='Get-you-certi' onClick={() => createPDF(currentIndex2.name)}>
                                                                                     Get Your Certificate
                                                                               </button>
                                                                               {

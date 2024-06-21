@@ -1,17 +1,4 @@
 import Slider from "react-slick";
-import photo from './../../assets/Ellipse22.png'
-import cup from './../../assets/mycup.svg'
-import img_1 from './../../assets/umber4 1.png'
-import img_2 from './../../assets/UMBER1 1.png'
-import img_3 from './../../assets/UMBER31.png'
-import img_4 from './../../assets/umber5 1.png'
-import img_5 from './../../assets/reff6 1.png'
-import img_6 from './../../assets/reff5 1.png'
-import img_7 from './../../assets/reff4 1.png'
-import img_8 from './../../assets/reff7 1.png'
-import img_9 from './../../assets/Ellipse5.png'
-import img_10 from './../../assets/reff221.png'
-import img_11 from './../../assets/reff21.png'
 import img_12 from './../../assets/bagdad.png'
 import img_13 from './../../assets/maldive.png'
 import img_14 from './../../assets/Ellipse23.png'
@@ -23,8 +10,6 @@ import img_21 from './../../assets/google1.svg'
 import img_22 from './../../assets/aws1.svg'
 import img_20 from './../../assets/gis1.svg'
 import img_19 from './../../assets/kwuit1.svg'
-import img_23 from './../../assets/23.svg'
-import img_24 from './../../assets/24.svg'
 import img_25 from './../../assets/Elaf.svg'
 import img_26 from './../../assets/المركز الاكاديمي.svg'
 import img_27 from './../../assets/البيت الانيق.svg'
@@ -44,11 +29,16 @@ import img_43 from './../../assets/4.svg'
 import img_44 from './../../assets/5.svg'
 import img_45 from './../../assets/6.svg'
 import img_46 from './../../assets/8.svg'
+import img_47 from './../../assets/Group.png'
+import img_48 from './../../assets/orangback.png'
+import img_49 from './../../assets/cup-min.png'
+import Line from './../../assets/Line7.png'
 
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './Portfolio.css'
+import { Link } from "react-router-dom";
 const Portfolio = () => {
 
   function SampleNextArrow(props) {
@@ -115,78 +105,41 @@ const Portfolio = () => {
         <p style={{ lineHeight: 'normal' }} className="text-my-black font-my-font text-2xl not-italic font-normal">99 reason to choose us</p>
       </section>
       {/* section two */}
-      <section className="md:flex">
-        <div className="md:w-[49.63%] mt-[5.31rem]">
-          <div className='relative max-w-[438px]'>
-            <img src={photo} alt="this is brand photo" />
-            <img className='absolute md:top-[-3.57rem] top-0 md:left-[3.5rem] hover:rotate-[-1.055deg] z-[1]' src={cup} alt="" />
-            <div className=' text-my-gold text-[5.4375rem] font-my-font  not-italic font-bold leading-normal rotate-[-90deg]
-                            absolute top-[9rem] left-[-1.3rem]
-            '>
-              <span>BRAND</span>
-              <p>ING</p>
-            </div>
-            <div className='w-[11.5rem] xl:block hidden  absolute top-[8.75rem] left-[27.56rem]'>
-              <h2 className='text-my-black font-my-font text-2xl not-italic font-bold leading-normal'>
-                Umber Project
-              </h2>
-              <p className='text-my-black font-my-font font-normal text-2xl not-italic leading-normal'>Full Branding Identity Design Packaging
-                <span className='underline flex items-center'>Click to View
-                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="6" style={{margin:'0 0 0 4px'}} viewBox="0 0 23 6" fill="none">
-                    <path d="M23 3L18 0.113249V5.88675L23 3ZM0 3.5H18.5V2.5H0V3.5Z" fill="#282828" />
-                  </svg>
-                </span>
-              </p>
-            </div>
-            <svg className='absolute xl:block hidden top-[9.4rem] left-[16.2rem] rotate-180' xmlns="http://www.w3.org/2000/svg" width="174" height="12" viewBox="0 0 174 12" fill="none">
-              <path d="M11.3333 5.99999C11.3333 3.05447 8.94553 0.666652 6 0.666652C3.05447 0.666652 0.666672 3.05447 0.666672 5.99998C0.666671 8.9455 3.05447 11.3333 6 11.3333C8.94553 11.3333 11.3333 8.9455 11.3333 5.99999ZM174 5L6 4.99999L6 6.99999L174 7L174 5Z" fill="black" />
-            </svg>
+      <section className="Cup-fq">
+        <div className="left">
+          <img src={img_48} alt="" />
+          <img src={img_49} alt="" />
+          <div className="Descrip-fqq">
+            <img src={Line} alt="" />
+            <h2>Umber Project<br /></h2>
+            <p>Full Branding<br />
+              Identity Design<br />
+              Packaging <br />
+              <Link>Click to View</Link>
+            </p>
           </div>
         </div>
-        <div className="md:w-[50.36%] sm:py-0 pt-5  mt-[2.12rem] ">
-          <div className='flex '>
-            <img className='w-[36.33%] rounded-tl-lg' src={img_1} alt="this is image" />
-            <img className='w-[63.66%]' src={img_2} alt="this is image" />
-          </div>
-          <div className='flex'>
-            <img className='w-[61.77%] rounded-bl-lg' src={img_3} alt="this is image" />
-            <img className='w-[38.22%]' src={img_4} alt="this is image" />
-          </div>
+        <div className="right">
+          <img src={img_47} alt="" />
         </div>
       </section>
       {/* sectiom three */}
-      <section className='md:flex'>
-        <div className='md:w-[49.56%]  md:mt-[3.12rem]'>
-          <div className='flex'>
-            <img className='w-[37.08%]' src={img_5} alt="this is image" />
-            <img className='w-[62.92%] rounded-tr-lg' src={img_6} alt="this is image" />
-          </div>
-          <div className='flex'>
-            <img className='w-[65.38%]' src={img_7} alt="this is image" />
-            <img className='w-[34.61%] rounded-br-lg' src={img_8} alt="this is image" />
+      <section className="Cup-fq asdasdasd">
+        <div className="left">
+          <img src={img_48} alt="" />
+          <img src={img_49} alt="" />
+          <div className="Descrip-fqq">
+            <img src={Line} alt="" />
+            <h2>Umber Project<br /></h2>
+            <p>Full Branding<br />
+              Identity Design<br />
+              Packaging <br />
+              <Link>Click to View</Link>
+            </p>
           </div>
         </div>
-        <div className='md:w-[50.43%] mt-[5.94rem] flex justify-end'>
-          <div className='relative max-w-[430px] '>
-            <img src={img_9} alt="this is image" />
-            <img className='absolute top-[-5.94rem] md:left-[-2.98rem]' src={img_10} alt="this is image" />
-            <img className='absolute top-[5.33rem] md:left-[4.5rem] left-[1rem] hover:rotate-[106.239deg] hover:left-0' src={img_11} alt="this is image" />
-            <div className='absolute top-[90px] left-[-240px] xl:block hidden z-[-1]'>
-              <h2 className='text-my-black font-my-font text-2xl not-italic font-bold leading-normal flex items-center'>
-                Reffeca Project
-                <svg xmlns="http://www.w3.org/2000/svg" width="174" height="12" viewBox="0 0 174 12" fill="none">
-                  <path d="M11.3333 5.99999C11.3333 3.05447 8.94553 0.666652 6 0.666652C3.05447 0.666652 0.666672 3.05447 0.666672 5.99998C0.666671 8.9455 3.05447 11.3333 6 11.3333C8.94553 11.3333 11.3333 8.9455 11.3333 5.99999ZM174 5L6 4.99999L6 6.99999L174 7L174 5Z" fill="black" />
-                </svg>
-              </h2>
-              <p className='text-my-black font-my-font text-2xl not-italic font-normal leading-normal'>Logo Design <br /> Packaging</p>
-            </div>
-            <h2 className=' xl:block hidden text-my-gold font-my-font text-[7.25rem] not-italic font-bold leading-normal 
-                           absolute right-[200px] top-[21rem]'>
-              BRAND <br />
-              ING
-            </h2>
-          </div>
-
+        <div className="right">
+          <img src={img_47} alt="" />
         </div>
       </section>
       {/* section four */}
@@ -323,8 +276,8 @@ const Portfolio = () => {
       {/* section six */}
       <section className='mt-[2.12rem] xl:flex'>
         <div className='xl:w-[48.60%]'>
-          <div className='max-w-[363px] relative'>
-            <img src={img_14} alt="this is image" />
+          <div className='max-w-[363px] relative Fluter'>
+            <img src={img_14} alt="this is image" className="Fluter2" />
             <img className='absolute top-0  sm:left-[1.3rem] left-0' src={img_15} alt="this is image" />
             <svg className='md:block hidden absolute top-[9.5rem] z-[-2] sm:right-[-3rem] right-[-1.5rem]' xmlns="http://www.w3.org/2000/svg" width="174" height="11" viewBox="0 0 174 11" fill="none">
               <path d="M162.667 5.5C162.667 8.44552 165.054 10.8333 168 10.8333C170.946 10.8333 173.333 8.44552 173.333 5.5C173.333 2.55448 170.946 0.166667 168 0.166667C165.054 0.166667 162.667 2.55448 162.667 5.5ZM0 6.5H168V4.5H0V6.5Z" fill="black" />
@@ -336,13 +289,13 @@ const Portfolio = () => {
           </div>
         </div>
         <div className='xl:w-[51.39%] flex justify-end'>
-          <div className='relative w-[396px] flex justify-end'>
-            <img src={img_16} alt="this is image" />
+          <div className=' Fluter relative w-[396px] flex justify-end Fluter222'>
+            <img src={img_16} alt="this is image" className="Fluter2" />
             <img className='absolute top-0' src={img_17} alt="this is image" />
             <svg className='md:block hidden absolute bottom-[9.4rem] right-[13.5rem] z-[-5]' xmlns="http://www.w3.org/2000/svg" width="174" height="11" viewBox="0 0 174 11" fill="none">
               <path d="M11.3333 5.49999C11.3333 2.55447 8.94553 0.166652 6 0.166652C3.05447 0.166652 0.666672 2.55447 0.666672 5.49998C0.666671 8.4455 3.05447 10.8333 6 10.8333C8.94553 10.8333 11.3333 8.4455 11.3333 5.49999ZM174 4.5L6 4.49999L6 6.49999L174 6.5L174 4.5Z" fill="black" />
             </svg>
-            <div className='md:block hidden w-[15.93rem] absolute bottom-[2.81rem] right-[25rem] '>
+            <div className='md:block hidden w-[15.93rem] absolute bottom-[2.81rem] right-[25rem] xcxcxc'>
               <h2 className='text-my-black font-my-font sm:text-2xl text-xs not-italic font-bold leading-normal'>Election app Project</h2>
               <p className=' text-my-black font-my-font sm:text-2xl text-xs not-italic font-normal leading-normal'>Full Project <br /> Logo Design <br /> Ui/Ux Design</p>
             </div>
@@ -351,9 +304,7 @@ const Portfolio = () => {
       </section>
       {/* section Seven*/}
       <div className="mt-[3.94rem] flex flex-wrap">
-        {/* <img src={img_23} alt="this is image" />
-        <img src={img_24} alt="this is image" /> */}
-        <h2 className="text-my-black font-my-font text-3xl not-italic font-bold leading-normal pl-[1rem] pt-[2.06rem]" style={{textAlign:'center' , width:'max-content' , margin:'0 auto'}}>Sister Companies & Digital Partners</h2>
+        <h2 className="text-my-black font-my-font text-3xl not-italic font-bold leading-normal pl-[1rem] pt-[2.06rem]" style={{ textAlign: 'center', width: 'max-content', margin: '0 auto' }}>Sister Companies & Digital Partners</h2>
       </div>
       {/* section */}
       <section style={{ boxShadow: ' 0px 4px 40px 0px rgba(112, 144, 176, 0.14)' }} className="of-slider FqQf-slider py-[2.26rem] px-[2.06rem] mt-[2.12rem]  bg-white ">

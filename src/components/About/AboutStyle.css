@@ -66,3 +66,19 @@
     text-align: center;
     line-height: 50.6px;
 }
+@media (max-width:600px)
+{
+    .titA{
+        font-size: 20px; 
+        padding: 0;
+       }
+       .aboutCont
+       {
+        padding:30px 10px;
+       }
+       .descAbout , .subAbo, .infoS
+       {
+        font-size: 16px;
+       }
+       
+}
