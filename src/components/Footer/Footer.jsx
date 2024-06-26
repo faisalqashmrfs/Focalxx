@@ -11,7 +11,7 @@ const Footer = () => {
             <div className='xl:flex'>
                 <div className="xl:w-[33.08%] sm:pb-[2.5rem] pb-[2rem]">
                     {/* logo */}
-                    <div className="pt-[2.5rem] flex items-end gap-[0.44rem] mb-[2.44rem]">
+                    <div className="pt-[2.5rem] flex items-end gap-[0.44rem] mb-[2.44rem] ">
                         <svg xmlns="http://www.w3.org/2000/svg" width="144" height="37" viewBox="0 0 144 37" fill="none">
                             <g clip-path="url(#clip0_553_96)">
                                 <path d="M8.72087 0.0454132V1.9595C8.3673 1.91969 8.01171 1.9006 7.65592 1.90231C3.89085 1.90231 1.90182 4.43536 1.90182 9.22729V14.0932H5.39017V15.8879H1.89511V36.8907H0V9.01032C0 5.92895 0.796618 3.50018 2.30264 1.98809C3.61748 0.672788 5.41532 0 7.64921 0C8.03829 0 8.38545 0.0151377 8.72087 0.0454132Z" fill="white" />
@@ -31,7 +31,7 @@ const Footer = () => {
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p className="text-white font-my-secound-font text-xl not-italic font-light leading-normal">.agency</p>
+                        <p className="text-white font-my-secound-font text-xl not-italic font-light leading-normal" style={{marginBottom:"-8px"}}>.agency</p>
                     </div>
                     <p className="text-white font-my-secound-font text-[1.5625rem] not-italic font-medium leading-normal">Head Office</p>
                     <p className="text-white font-my-secound-font text-xl not-italic font-light leading-normal">Syria - Latakia - GRH2+HJX
@@ -73,13 +73,13 @@ const Footer = () => {
                     </div>
 
                     <div className="xl:pt-[5.38rem]">
-                        <h2 className="text-white font-my-secound-font not-italic leading-normal font-medium text-[1.5625rem]">Keep In Touch</h2>
+                        <h2 className="text-white font-my-secound-font not-italic leading-normal font-medium text-[1.5625rem]" style={{letterSpacing:'2.1px',marginBottom:'5px'}}>Keep In Touch</h2>
                         <div className='flex gap-[0.57rem]'>
-                            <img src={facebook} alt="this is icon" />
-                            <img src={behance} alt="this is icon" />
-                            <img src={instagram} alt="this is icon" />
-                            <img src={twitter} alt="this is icon" />
-                            <img src={linkedin} alt="this is icon" />
+                            <a href="https://www.facebook.com/focal.x.agency/"><img src={facebook} alt="this is icon" /></a>
+                            <a href="https://www.behance.net/focal-x-agency"><img src={behance} alt="this is icon" /></a>
+                            <a href="https://www.instagram.com/focal.x.agency"><img src={instagram} alt="this is icon" /></a>
+                            <a href="https://twitter.com/focal_x_agency"><img src={twitter} alt="this is icon" /></a>
+                            <a href="https://www.linkedin.com/company/focal-x-agency/"><img src={linkedin} alt="this is icon" /></a>
                         </div>
                     </div>
                 </div>

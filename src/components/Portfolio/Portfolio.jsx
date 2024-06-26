@@ -33,7 +33,9 @@ import img_47 from './../../assets/Group.png'
 import img_48 from './../../assets/orangback.png'
 import img_49 from './../../assets/cup-min.png'
 import Line from './../../assets/Line7.png'
-
+import img_50 from './../../assets/Group234444427.svg'
+import img_51 from './../../assets/reffasdxxxxxxx1.svg'
+import img_52 from './../../assets/Ellipse55555555555.png'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -126,8 +128,8 @@ const Portfolio = () => {
       {/* sectiom three */}
       <section className="Cup-fq asdasdasd">
         <div className="left">
-          <img src={img_48} alt="" />
-          <img src={img_49} alt="" />
+          <img src={img_52} alt="" />
+          <img src={img_51} alt="" />
           <div className="Descrip-fqq">
             <img src={Line} alt="" />
             <h2>Umber Project<br /></h2>
@@ -139,7 +141,7 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="right">
-          <img src={img_47} alt="" />
+          <img src={img_50} alt="" />
         </div>
       </section>
       {/* section four */}

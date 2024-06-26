@@ -187,7 +187,7 @@
 }
 .footerHosting{
     font-family: Montserrat;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     line-height: 24.1px;
     display: inline-block;
@@ -232,10 +232,12 @@
 .hostCard .Description-fq2 p:nth-child(3)
 {
     color:  #71AA27;
+    display: none;
 }
 .hostCard .Description-fq3 p:nth-child(3)
 {
     color:  #1D5EDD;
+    display: none;
 }
 .hostCard .Description-fq0 h1 ,.hostCard  .Description-fq0 h2,.hostCard .Description-fq1 h1 ,.hostCard  .Description-fq1 h2,.hostCard .Description-fq2 h1 ,.hostCard  .Description-fq2 h2,.hostCard .Description-fq3 h1 ,.hostCard  .Description-fq3 h2
 {
@@ -254,7 +256,7 @@
 {
     font-family: Montserrat  !important;
     font-size: 16px  !important;
-    font-weight: 700  !important;
+    /* font-weight: 700  !important; */
     line-height: 19.5px  !important;
     text-align: left  !important;
     color: #282828  !important;

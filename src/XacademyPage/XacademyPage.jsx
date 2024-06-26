@@ -65,7 +65,7 @@ export const AcademyPage = () => {
           <h1>Digital marketing agency</h1>
         </div>
         <div className='ul-side-nav'>
-          <ul>
+          <ul className="ullll">
             <li className={choslink === 1 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(1)}>Home</Link> </li>
             <li className={choslink === 2 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(2)}>Services</Link> </li>
             <li className={choslink === 3 ? 'Activlink' : ''}><Link to={'/'} onClick={() => chosLink(3)}>Portfolio</Link> </li>
