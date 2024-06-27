@@ -15,19 +15,19 @@ export default function VideoFooter() {
                 </p>
                 <div className='IconsFather'>
                     <div>
-                        <img src={x} alt="" />
+                        <a href="https://twitter.com/focal_x_agency"><img src={x} alt="" /></a>
                     </div>
                     <div>
-                        <img src={insta} alt="" />
+                        <a href="https://www.instagram.com/focal.x.agency"><img src={insta} alt="" /></a>
                     </div>
                     <div>
-                        <img src={linkedin} alt="" />
+                        <a href="https://www.linkedin.com/company/focal-x-agency/"><img src={linkedin} alt="" /></a>
                     </div>
                     <div>
-                        <img src={behance} alt="" />
+                        <a href="https://www.behance.net/focal-x-agency"><img src={behance} alt="" /></a>
                     </div>
                     <div>
-                        <img src={facebook} alt="" />
+                        <a href="https://www.facebook.com/focal.x.agency/"><img src={facebook} alt="" /></a>
                     </div>
                 </div>
             </div>
